@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animations/animated_builder_example.dart';
-import 'package:flutter_animations/animation_controller_example.dart';
-import 'package:flutter_animations/tween_builder_example.dart';
+import 'package:flutter_animations/builder_example/builder_example.dart';
+import 'package:flutter_animations/implicit_animations/implicit_animations.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -12,31 +11,26 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Flutter Animation Course'),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const AnimationControllerExample(),
-                  ));
-                },
-                child: const Text('Animation Controller Demo')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const AnimatedBuilderExample(),
-                  ));
-                },
-                child: const Text('Animated Builder Demo')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const TweenBuilderExample(),
-                  ));
-                },
-                child: const Text('Tween Builder Demo')),
-          ],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const BuilderExample(),
+                    ));
+                  },
+                  child: const Text('Builder Animations')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const ImplicitAnimations(),
+                    ));
+                  },
+                  child: const Text('Implicit Animations')),
+            ],
+          ),
         ),
       ),
     );
