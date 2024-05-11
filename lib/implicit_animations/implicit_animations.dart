@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animations/implicit_animations/animated_align_demo.dart';
+import 'package:flutter_animations/implicit_animations/animated_container_demo.dart';
 
 class ImplicitAnimations extends StatelessWidget {
   const ImplicitAnimations({super.key});
@@ -21,13 +22,13 @@ class ImplicitAnimations extends StatelessWidget {
                     ));
                   },
                   child: const Text('Animated Align Demo')),
-              // ElevatedButton(
-              //     onPressed: () {
-              //       Navigator.of(context).push(MaterialPageRoute(
-              //         builder: (context) => const AnimatedBuilderExample(),
-              //       ));
-              //     },
-              //     child: const Text('Animated Builder Demo')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const AnimatedContainerDemo(),
+                    ));
+                  },
+                  child: const Text('Animated Container Demo')),
               // ElevatedButton(
               //     onPressed: () {
               //       Navigator.of(context).push(MaterialPageRoute(
