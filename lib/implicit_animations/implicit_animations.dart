@@ -5,6 +5,7 @@ import 'package:flutter_animations/implicit_animations/animated_default_text_dem
 import 'package:flutter_animations/implicit_animations/animated_opacity_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_padding_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_physical_modal_demo.dart';
+import 'package:flutter_animations/implicit_animations/animated_position_direcitonal_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_positon_demo.dart';
 
 class ImplicitAnimations extends StatelessWidget {
@@ -69,6 +70,14 @@ class ImplicitAnimations extends StatelessWidget {
                     ));
                   },
                   child: const Text('Animated Position Demo')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) =>
+                          const AnimatedPositonedDirectionalDemo(),
+                    ));
+                  },
+                  child: const Text('Animated Positioned Directional Demo')),
             ],
           ),
         ),
