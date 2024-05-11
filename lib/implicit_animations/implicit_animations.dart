@@ -8,6 +8,7 @@ import 'package:flutter_animations/implicit_animations/animated_padding_demo.dar
 import 'package:flutter_animations/implicit_animations/animated_physical_modal_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_position_direcitonal_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_positon_demo.dart';
+import 'package:flutter_animations/implicit_animations/animated_switcher_demo.dart';
 
 class ImplicitAnimations extends StatelessWidget {
   const ImplicitAnimations({super.key});
@@ -86,6 +87,13 @@ class ImplicitAnimations extends StatelessWidget {
                     ));
                   },
                   child: const Text('Animated Cross Fade Demo')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const AnimatedSwitcherDemo(),
+                    ));
+                  },
+                  child: const Text('Animated Switcher Demo')),
             ],
           ),
         ),
