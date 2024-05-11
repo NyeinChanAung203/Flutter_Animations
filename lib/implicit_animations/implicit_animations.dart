@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animations/implicit_animations/animated_align_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_container_demo.dart';
+import 'package:flutter_animations/implicit_animations/animated_crossfade_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_default_text_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_opacity_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_padding_demo.dart';
@@ -78,6 +79,13 @@ class ImplicitAnimations extends StatelessWidget {
                     ));
                   },
                   child: const Text('Animated Positioned Directional Demo')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const AnimatedCrossFadeDemo(),
+                    ));
+                  },
+                  child: const Text('Animated Cross Fade Demo')),
             ],
           ),
         ),
