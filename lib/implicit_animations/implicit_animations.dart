@@ -4,6 +4,7 @@ import 'package:flutter_animations/implicit_animations/animated_container_demo.d
 import 'package:flutter_animations/implicit_animations/animated_default_text_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_opacity_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_padding_demo.dart';
+import 'package:flutter_animations/implicit_animations/animated_physical_modal_demo.dart';
 
 class ImplicitAnimations extends StatelessWidget {
   const ImplicitAnimations({super.key});
@@ -53,6 +54,13 @@ class ImplicitAnimations extends StatelessWidget {
                     ));
                   },
                   child: const Text('Animated Padding Demo')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const AnimatedPhysicalModalDemo(),
+                    ));
+                  },
+                  child: const Text('Animated Physical Modal Demo')),
             ],
           ),
         ),
