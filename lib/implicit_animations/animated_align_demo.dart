@@ -107,7 +107,7 @@ class _AnimatedAlignDemoState extends State<AnimatedAlignDemo> {
     setState(() {
       tomPosition = Alignment(newXPositon, newYPositon);
       jerryPosition = Alignment(newXJPositon, newYJPositon);
-      print('x $x , y $y');
+      debugPrint('x $x , y $y');
       if (x <= 0.2 && y <= 0.2) {
         isCatch = true;
       }

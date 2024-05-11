@@ -3,6 +3,7 @@ import 'package:flutter_animations/implicit_animations/animated_align_demo.dart'
 import 'package:flutter_animations/implicit_animations/animated_container_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_crossfade_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_default_text_demo.dart';
+import 'package:flutter_animations/implicit_animations/animated_list_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_opacity_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_padding_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_physical_modal_demo.dart';
@@ -94,6 +95,13 @@ class ImplicitAnimations extends StatelessWidget {
                     ));
                   },
                   child: const Text('Animated Switcher Demo')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const AnimatedListDemo(),
+                    ));
+                  },
+                  child: const Text('Animated List Demo')),
             ],
           ),
         ),
