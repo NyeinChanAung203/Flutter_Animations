@@ -3,6 +3,7 @@ import 'package:flutter_animations/implicit_animations/animated_align_demo.dart'
 import 'package:flutter_animations/implicit_animations/animated_container_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_default_text_demo.dart';
 import 'package:flutter_animations/implicit_animations/animated_opacity_demo.dart';
+import 'package:flutter_animations/implicit_animations/animated_padding_demo.dart';
 
 class ImplicitAnimations extends StatelessWidget {
   const ImplicitAnimations({super.key});
@@ -45,6 +46,13 @@ class ImplicitAnimations extends StatelessWidget {
                     ));
                   },
                   child: const Text('Animated Opacity Demo')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const AnimatedPaddingDemo(),
+                    ));
+                  },
+                  child: const Text('Animated Padding Demo')),
             ],
           ),
         ),
