@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animations/explicit_animation/animated_builder_demo.dart';
+import 'package:flutter_animations/explicit_animation/defalult_textstyle_transition_demo.dart';
 import 'package:flutter_animations/explicit_animation/fade_transition_demo.dart';
 import 'package:flutter_animations/explicit_animation/positioned_transition_demo.dart';
 import 'package:flutter_animations/explicit_animation/rotation_transition_demo.dart';
@@ -53,6 +54,14 @@ class ExplicitAnimations extends StatelessWidget {
                     ));
                   },
                   child: const Text('Fade Transition')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) =>
+                          const DefaultTextStyleTransitionDemo(),
+                    ));
+                  },
+                  child: const Text('Default Text Style Transition')),
             ],
           ),
         ),
