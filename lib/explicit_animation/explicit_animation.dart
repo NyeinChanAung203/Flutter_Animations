@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animations/explicit_animation/animated_builder_demo.dart';
+import 'package:flutter_animations/explicit_animation/fade_transition_demo.dart';
 import 'package:flutter_animations/explicit_animation/positioned_transition_demo.dart';
 import 'package:flutter_animations/explicit_animation/rotation_transition_demo.dart';
 import 'package:flutter_animations/explicit_animation/size_transition_demo.dart';
@@ -44,7 +45,14 @@ class ExplicitAnimations extends StatelessWidget {
                       builder: (context) => const AnimatedBuilderExpDemo(),
                     ));
                   },
-                  child: const Text('Animated Builder')),
+                  child: const Text('Animated Builder with Transform')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const FadeTransitionDemo(),
+                    ));
+                  },
+                  child: const Text('Fade Transition')),
             ],
           ),
         ),
