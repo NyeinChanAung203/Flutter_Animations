@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animations/builder_example/builder_example.dart';
+import 'package:flutter_animations/explicit_animation/explicit_animation.dart';
 import 'package:flutter_animations/implicit_animations/implicit_animations.dart';
 
 class HomePage extends StatelessWidget {
@@ -29,6 +30,13 @@ class HomePage extends StatelessWidget {
                     ));
                   },
                   child: const Text('Implicit Animations')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const ExplicitAnimations(),
+                    ));
+                  },
+                  child: const Text('Explicit Animations')),
             ],
           ),
         ),
