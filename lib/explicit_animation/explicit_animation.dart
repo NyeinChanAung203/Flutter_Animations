@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animations/explicit_animation/positioned_transition_demo.dart';
+import 'package:flutter_animations/explicit_animation/rotation_transition_demo.dart';
 import 'package:flutter_animations/explicit_animation/size_transition_demo.dart';
 
 class ExplicitAnimations extends StatelessWidget {
@@ -29,6 +30,13 @@ class ExplicitAnimations extends StatelessWidget {
                     ));
                   },
                   child: const Text('Size Transition')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const RotationTransitionDemo(),
+                    ));
+                  },
+                  child: const Text('Rotation Transition')),
             ],
           ),
         ),
