@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animations/page_transitions/example_page.dart';
 import 'package:flutter_animations/page_transitions/page_fade_transition_demo.dart';
+import 'package:flutter_animations/page_transitions/page_scale_transition_demo.dart';
 
 class PageTransitionAnimations extends StatelessWidget {
   const PageTransitionAnimations({super.key});
@@ -21,6 +22,12 @@ class PageTransitionAnimations extends StatelessWidget {
                         .push(PageFadeTransition(page: const ExamplePage()));
                   },
                   child: const Text('Page Fade Transition')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context)
+                        .push(PageScaleTransition(page: const ExamplePage()));
+                  },
+                  child: const Text('Page Scale Transition')),
             ],
           ),
         ),
