@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animations/builder_example/builder_example.dart';
 import 'package:flutter_animations/explicit_animation/explicit_animation.dart';
 import 'package:flutter_animations/implicit_animations/implicit_animations.dart';
+import 'package:flutter_animations/page_transitions/page_transition.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -37,6 +38,13 @@ class HomePage extends StatelessWidget {
                     ));
                   },
                   child: const Text('Explicit Animations')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const PageTransitionAnimations(),
+                    ));
+                  },
+                  child: const Text('Page Transition Animations')),
             ],
           ),
         ),
